@@ -1,0 +1,180 @@
+/* Google Fonts Import */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+/* Tailwind Directives */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* ✅ Google Fonts now loaded via next/font in layout.jsx — no render-blocking @import */
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: var(--font-montserrat), "Montserrat", sans-serif;
+}
+
+/* Prevent text selection globally */
+* {
+  user-select: none;
+}
+
+/* Custom Marquee Animation */
+@layer utilities {
+  /* Keyframes for Marquee Effect */
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* Animation Class */
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+  }
+
+  /* Pause Animation When Any Child is Hovered */
+  .group:hover .animate-marquee {
+    animation-play-state: paused;
+  }
+
+  /* Custom Flip Card Utilities */
+  .perspective { perspective: 1000px; }
+  .transform-style-3d { transform-style: preserve-3d; }
+  .backface-hidden { backface-visibility: hidden; }
+  .rotate-y-180 { transform: rotateY(180deg); }
+
+  /* Navbar & Menu Entrance Animations (Pure CSS for better performance) */
+  @keyframes nav-slide-down {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .nav-entrance {
+    animation: nav-slide-down 0.5s ease-out forwards;
+  }
+
+  .dropdown-transition {
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  }
+
+  /* Mobile Menu Transitions */
+  .mobile-menu-overlay {
+    transition: opacity 0.3s ease;
+  }
+  
+  .mobile-menu-panel {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+  }
+
+  .submenu-transition {
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .submenu-transition.open {
+    max-height: 1000px; /* Large enough for content */
+    opacity: 1;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.5s ease-out forwards;
+  }
+}
+
+/* Critical CSS for header & hero section */
+header { background: #fff; padding: 20px; }
+
+/* ────────────────────────────────────────────────────────────────
+   Shared animations — consolidated from 8+ component <style jsx>
+   blocks to eliminate duplicate runtime CSS parsing.
+   ──────────────────────────────────────────────────────────────── */
+
+/* Fade-up entrance animation (used by nearly every section) */
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Float animation (hero image, approach image) */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Fade-in animation */
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Decorative blob animations (hero background) */
+.animate-blob {
+  animation: blob 7s ease-in-out infinite;
+}
+
+.animate-blob-delay {
+  animation: blob 7s ease-in-out 2s infinite;
+}
+
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Frosted glass custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.2);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.35);
+}
+
+

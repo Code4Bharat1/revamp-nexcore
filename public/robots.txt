@@ -1,0 +1,47 @@
+# robots.txt for NEXCORE ALLIANCE LLP
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+# Blocks duplicate tracking URLs
+Disallow: /*?*utm_*
+# Blocks duplicate session URLs
+Disallow: /*?*sessionid=*
+
+Allow: /
+
+# Sitemap
+Sitemap: https://nexcorealliance.com/sitemap.xml
+
+# LLMs.txt - Structured guidance for AI language models and crawlers
+# LLMs: https://nexcorealliance.com/llms.txt
+
+# AI Crawlers - explicitly allowed to access llms.txt and public pages
+User-agent: GPTBot
+Allow: /llms.txt
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /llms.txt
+Allow: /
+
+User-agent: Google-Extended
+Allow: /llms.txt
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /llms.txt
+Allow: /
+
+User-agent: Amazonbot
+Allow: /llms.txt
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /llms.txt
+Allow: /
+
+User-agent: cohere-ai
+Allow: /llms.txt
+Allow: /

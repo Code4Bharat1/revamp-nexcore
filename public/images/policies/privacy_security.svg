@@ -1,0 +1,34 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900' width='100%' height='100%'>
+  <defs>
+    <radialGradient id='bgGrad2' cx='50%' cy='50%' r='70%'>
+      <stop offset='0%' stop-color='#0a2e5c'/>
+      <stop offset='60%' stop-color='#05142e'/>
+      <stop offset='100%' stop-color='#020814'/>
+    </radialGradient>
+    <radialGradient id='shieldGlow' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#00f2fe' stop-opacity='0.9'/>
+      <stop offset='50%' stop-color='#4facfe' stop-opacity='0.5'/>
+      <stop offset='100%' stop-color='#05142e' stop-opacity='0'/>
+    </radialGradient>
+    <filter id='glow2'>
+      <feGaussianBlur stdDeviation='10' result='blur'/>
+      <feMerge><feMergeNode in='blur'/><feMergeNode in='SourceGraphic'/></feMerge>
+    </filter>
+  </defs>
+  <rect width='1600' height='900' fill='url(#bgGrad2)'/>
+  <circle cx='800' cy='450' r='360' fill='url(#shieldGlow)'/>
+  
+  <!-- 3D Shield Outline -->
+  <path d='M800 180 L1040 260 V500 C1040 640 800 740 800 740 C800 740 560 640 560 500 V260 Z' fill='none' stroke='#00f2fe' stroke-width='6' filter='url(#glow2)'/>
+  <path d='M800 210 L1010 280 V490 C1010 615 800 705 800 705 C800 705 590 615 590 490 V280 Z' fill='#ffffff' fill-opacity='0.05' stroke='#4facfe' stroke-width='2'/>
+
+  <!-- Lock Core -->
+  <rect x='740' y='420' width='120' height='110' rx='16' fill='#00f2fe' opacity='0.9' filter='url(#glow2)'/>
+  <path d='M765 420 V370 C765 340 835 340 835 370 V420' fill='none' stroke='#00f2fe' stroke-width='12' stroke-linecap='round' filter='url(#glow2)'/>
+  <circle cx='800' cy='465' r='14' fill='#05142e'/>
+  <polygon points='794,472 806,472 803,500 797,500' fill='#05142e'/>
+
+  <!-- Encryption Rings -->
+  <circle cx='800' cy='450' r='420' fill='none' stroke='#00f2fe' stroke-width='1.5' stroke-dasharray='4 12' opacity='0.5'/>
+  <circle cx='800' cy='450' r='450' fill='none' stroke='#4facfe' stroke-width='2' stroke-dasharray='20 10 5 10' opacity='0.6'/>
+</svg>

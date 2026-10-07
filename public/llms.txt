@@ -1,0 +1,86 @@
+# llms.txt - Nexcore Alliance LLP
+# Website: https://nexcorealliance.com/
+# Purpose: Provide structured guidance for LLMs and AI crawlers to access key pages.
+
+## Company
+Nexcore Alliance LLP is an IT solutions and services company offering digital transformation services, AI solutions, voice agents, and Odoo ERP consulting & development.
+
+## Primary Website
+Homepage: https://nexcorealliance.com/
+
+## Core Pages
+About Us: https://nexcorealliance.com/aboutus
+Our Approach: https://nexcorealliance.com/approach
+Clients: https://nexcorealliance.com/clients
+Blog: https://nexcorealliance.com/blog
+Services: https://nexcorealliance.com/services
+Odoo Videos: https://nexcorealliance.com/OdooVideos
+
+## Core Service Pages
+AI Solutions: https://nexcorealliance.com/aisolutions
+Voice Agent: https://nexcorealliance.com/voiceagent
+Services We Offer: https://nexcorealliance.com/servicesweoffer
+Case Study: https://nexcorealliance.com/casestudy
+Contact Us: https://nexcorealliance.com/contactus
+
+## Odoo Services
+Odoo Consulting: https://nexcorealliance.com/servicesweoffer/odoo-consulting
+Odoo Configuration: https://nexcorealliance.com/servicesweoffer/odoo-configuration
+Odoo Customization: https://nexcorealliance.com/servicesweoffer/odoo-customization
+Odoo Development Services: https://nexcorealliance.com/servicesweoffer/odoo-development-services
+Odoo Integration: https://nexcorealliance.com/servicesweoffer/odoo-integration
+Odoo Ecommerce: https://nexcorealliance.com/servicesweoffer/odoo-ecommerce
+Odoo Support: https://nexcorealliance.com/servicesweoffer/odoo-support
+Odoo Implementation: https://nexcorealliance.com/servicesweoffer/odoo-implementation
+Odoo Migration: https://nexcorealliance.com/servicesweoffer/odoo-migration
+Odoo Maintenance: https://nexcorealliance.com/servicesweoffer/odoo-maintenance
+Odoo Offshore: https://nexcorealliance.com/servicesweoffer/odoo-offshore
+
+## Odoo Apps Overview
+Apps Hub: https://nexcorealliance.com/apps
+
+## Odoo Apps Pages
+Odoo CRM: https://nexcorealliance.com/apps/odoo-crm
+Odoo Invoicing: https://nexcorealliance.com/apps/odoo-invoicing
+Odoo Sales: https://nexcorealliance.com/apps/odoo-sales
+Odoo E-Commerce: https://nexcorealliance.com/apps/odoo-e-commerce
+Odoo Accounting: https://nexcorealliance.com/apps/odoo-accounting
+Odoo Inventory: https://nexcorealliance.com/apps/odoo-inventory
+Odoo Manufacturing: https://nexcorealliance.com/apps/odoo-manufacturing
+Odoo Point of Sale: https://nexcorealliance.com/apps/odoo-point-of-sale
+Odoo Project: https://nexcorealliance.com/apps/odoo-project
+Odoo Quality: https://nexcorealliance.com/apps/odoo-quality
+Odoo Maintenance: https://nexcorealliance.com/apps/odoo-maintenance
+Odoo PLM: https://nexcorealliance.com/apps/odoo-plm
+Odoo Purchase: https://nexcorealliance.com/apps/odoo-purchase
+Odoo Timesheet: https://nexcorealliance.com/apps/odoo-timesheet
+Odoo Email Marketing: https://nexcorealliance.com/apps/odoo-e-mail-marketing
+Odoo Expenses: https://nexcorealliance.com/apps/odoo-expenses
+Odoo Event Management: https://nexcorealliance.com/apps/odoo-event-management
+Odoo Time Off: https://nexcorealliance.com/apps/odoo-timeoff
+Odoo Recruitment: https://nexcorealliance.com/apps/odoo-recruitment
+Odoo Appraisal: https://nexcorealliance.com/apps/odoo-appraisal
+Odoo Helpdesk: https://nexcorealliance.com/apps/odoo-helpdesk
+Odoo Marketing Automation: https://nexcorealliance.com/apps/odoo-marketing-automation
+Odoo Documents: https://nexcorealliance.com/apps/odoo-documents
+Odoo HR Management: https://nexcorealliance.com/apps/odoo-hr-management
+
+## Legal & Policy Pages
+About Policy Page: https://nexcorealliance.com/policies/about
+Contact Policy Page: https://nexcorealliance.com/policies/contact
+Terms and Conditions: https://nexcorealliance.com/policies/termsandcondition
+Privacy Policy: https://nexcorealliance.com/policies/privacy
+Refund Policy: https://nexcorealliance.com/policies/refund-policy
+Cancellation Policy: https://nexcorealliance.com/policies/cancellation-policy
+Delivery Policy: https://nexcorealliance.com/policies/delivery-policy
+Product Pricing Policy: https://nexcorealliance.com/policies/product-pricing
+
+## Preferred Content for AI Indexing
+- Service descriptions
+- AI solutions & voice agent details
+- Odoo services and app modules
+- Case studies
+- Contact information and company overview
+
+## Notes
+This file is intended to help AI systems understand Nexcore Alliance LLP's website structure and key business offerings.
