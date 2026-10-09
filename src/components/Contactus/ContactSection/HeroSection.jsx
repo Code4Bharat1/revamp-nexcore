@@ -25,60 +25,48 @@ const HeroSection = () => {
 
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
-        defaults: { ease: "power3.out", duration: 0.7 },
+        defaults: { ease: "power3.out", duration: 0.5 },
       });
 
       tl.fromTo(
         breadcrumbRef.current,
-        { opacity: 0, y: -15 },
-        { opacity: 1, y: 0, duration: 0.5 }
+        { opacity: 0, y: -10 },
+        { opacity: 1, y: 0, duration: 0.3 }
       )
         .fromTo(
           badgeRef.current,
-          { opacity: 0, scale: 0.9, y: 10 },
-          { opacity: 1, scale: 1, y: 0, duration: 0.5 },
-          "-=0.3"
-        )
-        .fromTo(
-          headingRef.current,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.8 },
-          "-=0.3"
+          { opacity: 0, scale: 0.95 },
+          { opacity: 1, scale: 1, duration: 0.3 },
+          "-=0.1"
         )
         .fromTo(
           descriptionRef.current,
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.6 },
-          "-=0.4"
-        )
-        .fromTo(
-          bgImageRef.current,
-          { opacity: 0, scale: 1.04 },
-          { opacity: 1, scale: 1, duration: 1.1 },
-          "-=0.7"
+          { opacity: 0, y: 15 },
+          { opacity: 1, y: 0, duration: 0.4 },
+          "-=0.2"
         )
         .fromTo(
           contactCardsRef.current?.children || [],
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, stagger: 0.1, duration: 0.6 },
-          "-=0.4"
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, stagger: 0.08, duration: 0.4 },
+          "-=0.2"
         )
         .fromTo(
           branchCardRef.current,
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.6 },
-          "-=0.3"
+          { opacity: 0, y: 15 },
+          { opacity: 1, y: 0, duration: 0.4 },
+          "-=0.2"
         )
         .fromTo(
           ctaButtonsRef.current,
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.5 },
-          "-=0.3"
+          { opacity: 0, y: 15 },
+          { opacity: 1, y: 0, duration: 0.4 },
+          "-=0.2"
         )
         .fromTo(
           quickStatsRef.current,
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.6 },
+          { opacity: 0, y: 15 },
+          { opacity: 1, y: 0, duration: 0.4 },
           "-=0.2"
         );
     }, containerRef);

@@ -15,35 +15,45 @@ export default function Hero3DCanvas({ variant = "consulting" }) {
 
   useEffect(() => {
     if (!mounted || typeof window === "undefined") return;
-    gsap.registerPlugin(ScrollTrigger);
 
-    const container = mountRef.current;
-    if (!container) return;
+    let idleId;
+    let observer;
+    let handleMouseMove;
+    let handleResize;
+    let animationFrameId;
+    let scrollTl;
+    let renderer, starGeo, starMat, nebulaGeo, nebulaMat;
 
-    let width = container.clientWidth || window.innerWidth;
-    let height = container.clientHeight || window.innerHeight;
+    const initCanvas = () => {
+      gsap.registerPlugin(ScrollTrigger);
 
-    // 1. Scene, Camera, Renderer
-    const scene = new THREE.Scene();
-    scene.fog = new THREE.FogExp2(0x08153a, 0.0018);
+      const container = mountRef.current;
+      if (!container) return;
 
-    const camera = new THREE.PerspectiveCamera(55, width / height, 0.1, 1000);
-    camera.position.set(0, 0, 19);
+      let width = container.clientWidth || window.innerWidth;
+      let height = container.clientHeight || window.innerHeight;
 
-    const renderer = new THREE.WebGLRenderer({
-      alpha: true,
-      antialias: true,
-      powerPreference: "high-performance",
-    });
-    renderer.setSize(width, height);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
-    renderer.outputColorSpace = THREE.SRGBColorSpace;
+      // 1. Scene, Camera, Renderer
+      const scene = new THREE.Scene();
+      scene.fog = new THREE.FogExp2(0x08153a, 0.0018);
 
-    // Clear existing canvas
-    while (container.firstChild) {
-      container.removeChild(container.firstChild);
-    }
-    container.appendChild(renderer.domElement);
+      const camera = new THREE.PerspectiveCamera(55, width / height, 0.1, 1000);
+      camera.position.set(0, 0, 19);
+
+      renderer = new THREE.WebGLRenderer({
+        alpha: true,
+        antialias: true,
+        powerPreference: "high-performance",
+      });
+      renderer.setSize(width, height);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
+
+      // Clear existing canvas
+      while (container.firstChild) {
+        container.removeChild(container.firstChild);
+      }
+      container.appendChild(renderer.domElement);
 
     // 2. Lighting Setup
     const ambientLight = new THREE.AmbientLight(0x38bdf8, 1.0);
@@ -865,20 +875,32 @@ export default function Hero3DCanvas({ variant = "consulting" }) {
       renderer.setSize(width, height);
     };
 
-    window.addEventListener("resize", handleResize);
+      window.addEventListener("resize", handleResize, { passive: true });
+    };
+
+    if ("requestIdleCallback" in window) {
+      idleId = requestIdleCallback(() => initCanvas(), { timeout: 1000 });
+    } else {
+      idleId = setTimeout(() => initCanvas(), 100);
+    }
 
     // Cleanup
     return () => {
-      observer.disconnect();
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("resize", handleResize);
-      cancelAnimationFrame(animationFrameId);
-      if (scrollTl.scrollTrigger) scrollTl.scrollTrigger.kill();
-      renderer.dispose();
-      starGeo.dispose();
-      starMat.dispose();
-      nebulaGeo.dispose();
-      nebulaMat.dispose();
+      if ("cancelIdleCallback" in window && idleId) {
+        cancelIdleCallback(idleId);
+      } else if (idleId) {
+        clearTimeout(idleId);
+      }
+      if (observer) observer.disconnect();
+      if (handleMouseMove) window.removeEventListener("mousemove", handleMouseMove);
+      if (handleResize) window.removeEventListener("resize", handleResize);
+      if (animationFrameId) cancelAnimationFrame(animationFrameId);
+      if (scrollTl && scrollTl.scrollTrigger) scrollTl.scrollTrigger.kill();
+      if (renderer) renderer.dispose();
+      if (starGeo) starGeo.dispose();
+      if (starMat) starMat.dispose();
+      if (nebulaGeo) nebulaGeo.dispose();
+      if (nebulaMat) nebulaMat.dispose();
     };
   }, [mounted, variant]);
 
