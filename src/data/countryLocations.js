@@ -1,10 +1,10 @@
 export const countrySubLocations = {
   'IN': [
     { id: 'in-mum', name: 'Mumbai', address: 'Building No. 3, White House, Kurla West, Mumbai, Maharashtra 400070, India', lat: 19.076, lng: 72.8777 },
-    { id: 'in-pun', name: 'Pune', address: 'Cyber City, Magarpatta, Hadapsar, Pune, Maharashtra 411013, India', lat: 18.5204, lng: 73.8567 },
-    { id: 'in-del', name: 'New Delhi', address: 'Connaught Place, New Delhi, Delhi 110001, India', lat: 28.6139, lng: 77.2090 },
-    { id: 'in-bgl', name: 'Bengaluru', address: 'Electronic City Phase 1, Bengaluru, Karnataka 560100, India', lat: 12.9716, lng: 77.5946 },
-    { id: 'in-hyd', name: 'Hyderabad', address: 'HITEC City, Hyderabad, Telangana 500081, India', lat: 17.3850, lng: 78.4867 }
+    // { id: 'in-pun', name: 'Pune', address: 'Cyber City, Magarpatta, Hadapsar, Pune, Maharashtra 411013, India', lat: 18.5204, lng: 73.8567 },
+    // { id: 'in-del', name: 'New Delhi', address: 'Connaught Place, New Delhi, Delhi 110001, India', lat: 28.6139, lng: 77.2090 },
+    // { id: 'in-bgl', name: 'Bengaluru', address: 'Electronic City Phase 1, Bengaluru, Karnataka 560100, India', lat: 12.9716, lng: 77.5946 },
+    // { id: 'in-hyd', name: 'Hyderabad', address: 'HITEC City, Hyderabad, Telangana 500081, India', lat: 17.3850, lng: 78.4867 }
   ],
   'US': [
     { id: 'us-nyc', name: 'New York', address: 'Empire State Building, 350 5th Ave, New York, NY 10118, USA', lat: 40.7128, lng: -74.0060 },

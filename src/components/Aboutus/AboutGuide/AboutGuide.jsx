@@ -18,6 +18,7 @@ import {
   ThumbsUp,
 } from "lucide-react";
 import CounterNumber from "@/components/common/CounterNumber";
+import Awards from "@/components/Awards/Awards";
 
 const guideItems = [
   {
@@ -230,6 +231,11 @@ const AboutGuide = () => {
             <div className="text-base sm:text-lg font-bold text-[#08153A] mb-0.5">Client Satisfaction</div>
             <div className="text-xs text-slate-500">Verified Client Reviews</div>
           </div>
+        </div>
+
+        {/* Honours & Accolades (Awards) Section */}
+        <div className="mb-14 sm:mb-16 -mx-4 sm:-mx-6 lg:-mx-8">
+          <Awards />
         </div>
 
         {/* Ready to Start Your Digital Journey Callout Box */}

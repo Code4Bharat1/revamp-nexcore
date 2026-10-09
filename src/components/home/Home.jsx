@@ -10,7 +10,6 @@ const StatsStrip = dynamic(
   { ssr: false }
 );
 
-
 const ValuesSection = dynamic(
   () => import("../Aboutus/Values/ValuesSection"),
   { ssr: false }
@@ -90,9 +89,12 @@ const Home = () => {
         <StatsStrip />
       </LazySection>
 
+      {/* Our Services */}
       <LazySection id="services" minHeight={500}>
         <ServiceSection />
       </LazySection>
+
+      {/* Our Values */}
       <LazySection id="values" minHeight={600}>
         <ValuesSection />
       </LazySection>
@@ -102,24 +104,27 @@ const Home = () => {
         <ProductsSection />
       </LazySection>
 
+      {/* Our Approach */}
       <LazySection id="approach-detail" minHeight={500}>
         <ApproachSec />
       </LazySection>
 
-      <LazySection id="awards" minHeight={400}>
+      {/* Our Awards & Recognition */}
+      {/* <LazySection id="awards" minHeight={400}>
         <Awards />
-      </LazySection>
+      </LazySection> */}
 
-      {/* 3D Global Reach Section (Eight countries. Six offices. One operating standard.) */}
+      {/* Our Reach Section (3D Global) */}
       <LazySection id="reach" minHeight={700}>
         <ReachSection />
       </LazySection>
 
-      {/* Client Testimonials (What Our Clients Say) */}
+      {/* Client Testimonials */}
       <LazySection id="client-testimonials" minHeight={500}>
         <ClientTestimonials />
       </LazySection>
 
+      {/* Footer */}
       <LazySection id="footer" minHeight={300}>
         <Footer />
       </LazySection>

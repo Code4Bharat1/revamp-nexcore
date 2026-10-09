@@ -100,7 +100,7 @@ export default function Awards() {
   const marqueeAwards = [...awardsData, ...awardsData];
 
   return (
-    <section id="awards" className="w-full bg-white py-20 md:py-28 relative overflow-hidden">
+    <section id="awards" className="w-full bg-transparent py-10 sm:py-14 relative overflow-hidden">
       {/* Soft Ambient Background Elements */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl opacity-30 pointer-events-none" />
       <div className="absolute bottom-10 left-1/4 w-96 h-96 bg-amber-100/30 rounded-full blur-3xl opacity-25 pointer-events-none" />

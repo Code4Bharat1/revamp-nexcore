@@ -79,7 +79,7 @@ const ApproachSec = () => {
         zIndex: 10 + index,
         opacity: 1,
         filter: "brightness(1)",
-        boxShadow: "0 14px 35px rgba(0, 0, 0, 0.55)",
+        boxShadow: "0 14px 35px rgba(11, 19, 48, 0.22)",
       };
     }
 
@@ -90,7 +90,7 @@ const ApproachSec = () => {
         zIndex: 60,
         opacity: 1,
         filter: "brightness(1.05)",
-        boxShadow: "0 25px 55px rgba(0, 0, 0, 0.85)",
+        boxShadow: "0 25px 55px rgba(11, 19, 48, 0.45)",
       };
     }
 
@@ -101,8 +101,8 @@ const ApproachSec = () => {
           transform: `translateX(-24px) rotate(${config.rotate}deg) scale(0.98)`,
           zIndex: 10 + index,
           opacity: 0.9,
-          filter: "brightness(0.9)",
-          boxShadow: "0 8px 22px rgba(0, 0, 0, 0.4)",
+          filter: "brightness(0.92)",
+          boxShadow: "0 8px 22px rgba(11, 19, 48, 0.15)",
         };
       }
       if (rowIndex > rowHoveredIndex) {
@@ -110,8 +110,8 @@ const ApproachSec = () => {
           transform: `translateX(24px) rotate(${config.rotate}deg) scale(0.98)`,
           zIndex: 10 + index,
           opacity: 0.9,
-          filter: "brightness(0.9)",
-          boxShadow: "0 8px 22px rgba(0, 0, 0, 0.4)",
+          filter: "brightness(0.92)",
+          boxShadow: "0 8px 22px rgba(11, 19, 48, 0.15)",
         };
       }
     }
@@ -121,23 +121,23 @@ const ApproachSec = () => {
       transform: `rotate(${config.rotate}deg) scale(0.98)`,
       zIndex: 10 + index,
       opacity: 0.9,
-      filter: "brightness(0.9)",
-      boxShadow: "0 8px 22px rgba(0, 0, 0, 0.4)",
+      filter: "brightness(0.92)",
+      boxShadow: "0 8px 22px rgba(11, 19, 48, 0.15)",
     };
   };
 
   return (
-    <section ref={sectionRef} className="w-full bg-[#08153a] bg-gradient-to-b from-[#050d24] via-[#08153a] to-[#050d24] py-10 sm:py-14 md:py-16 relative overflow-hidden select-none border-t border-blue-900/40 text-white">
+    <section ref={sectionRef} className="w-full bg-[#F9F7F7] py-12 sm:py-16 md:py-20 relative overflow-hidden select-none border-t border-slate-200/80 text-[#112D4E]">
       {/* Background ambient lighting glows */}
-      <div className="absolute top-12 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-16 right-1/4 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-12 left-1/4 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-16 right-1/4 w-[500px] h-[500px] bg-orange-500/5 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Grid Pattern */}
       <div
-        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        className="absolute inset-0 opacity-[0.35] pointer-events-none"
         style={{
-          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px),
-                           linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(rgba(17, 45, 78, 0.04) 1px, transparent 1px),
+                           linear-gradient(90deg, rgba(17, 45, 78, 0.04) 1px, transparent 1px)`,
           backgroundSize: "60px 60px",
         }}
       />
@@ -148,13 +148,13 @@ const ApproachSec = () => {
             Our Process Workflow
           </span>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#0B1330] leading-tight tracking-tight">
             Our Approach {" "}
             <span className="text-orange-600">
               Step by Step
             </span>
           </h2>
-          <p className="text-xs sm:text-sm md:text-base text-slate-300/80 max-w-2xl mx-auto font-normal">
+          <p className="text-xs sm:text-sm md:text-base text-slate-600 max-w-2xl mx-auto font-medium">
             A structured, iterative lifecycle engineered to turn complex business requirements into high-impact digital solutions.
           </p>
         </div>
@@ -188,7 +188,7 @@ const ApproachSec = () => {
                     }}
                   >
                     {/* Exact Uniform Size for all 5 cards */}
-                    <div className="relative w-[285px] sm:w-[315px] lg:w-[345px] xl:w-[365px] aspect-[1024/720] rounded-[18px] lg:rounded-[22px] overflow-hidden bg-[#060e24] shadow-xl border border-white/10">
+                    <div className="relative w-[285px] sm:w-[315px] lg:w-[345px] xl:w-[365px] aspect-[1024/720] rounded-[18px] lg:rounded-[22px] overflow-hidden bg-[#060e24] shadow-2xl border border-slate-900/20">
                       <Image
                         src={step.imgSrc}
                         alt={step.title}
@@ -226,7 +226,7 @@ const ApproachSec = () => {
                     }}
                   >
                     {/* Exact Uniform Size for all 5 cards */}
-                    <div className="relative w-[285px] sm:w-[315px] lg:w-[345px] xl:w-[365px] aspect-[1024/720] rounded-[18px] lg:rounded-[22px] overflow-hidden bg-[#060e24] shadow-xl border border-white/10">
+                    <div className="relative w-[285px] sm:w-[315px] lg:w-[345px] xl:w-[365px] aspect-[1024/720] rounded-[18px] lg:rounded-[22px] overflow-hidden bg-[#060e24] shadow-2xl border border-slate-900/20">
                       <Image
                         src={step.imgSrc}
                         alt={step.title}
